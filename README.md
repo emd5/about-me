@@ -1,2 +1,2 @@
-# about-me
+# About-me
 An about me project
