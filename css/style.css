@@ -1,0 +1,26 @@
+/* style.css  */
+
+html{
+  background: #333;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  
+}
+header{
+  background: palevioletred;
+  padding: 2em;
+  height: 10vh;
+  font-size: 20px;
+  text-align: center;
+}
+
+main{
+ height: 80vh;
+}
+
+footer{
+  background: pink;
+  color: black;
+  height: 5vh;
+  padding: 2em;
+}
