@@ -9,13 +9,9 @@ html{
 header{
   background: palevioletred;
   padding: 2em;
-  height: 10vh;
+  height: 30vh;
   font-size: 20px;
   text-align: center;
-}
-
-main{
- height: 80vh;
 }
 
 footer{
@@ -23,4 +19,12 @@ footer{
   color: black;
   height: 5vh;
   padding: 2em;
+  text-align: center;
 }
+
+section{
+  height: 40vh;
+  color: white;
+}
+
+
