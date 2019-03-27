@@ -1,20 +1,41 @@
 'use strict';
-
 console.log('The page just loaded.');
 
-var userName = prompt('What is your name');
+var userName = prompt('Hello Welcome to my page. What is your name? ');
 
 if(userName.toLowerCase() === 'liz'){
   console.log('Hey we have the same name ');
 } else if(userName === 'Sam'){
-  console.log('You are my 201 instructor ');
+  console.log('You are my 201 instructor!');
 } else {
   console.log('Welcome to the site ' + userName);
 }
 
-var testArray = []
 
-var arrayWithValues = [1, 2, true, {}, console.log, [2,4]];
+var questionBank = ['Do I like coding? ','I love frontend development? ','I love working in backend development? ','My goal is to teach?', 'Do I love to write in python?'];
 
-console.log(testArray);
-console.log(arrayWithValues);
+var userInput = [];
+
+for (var i=0; i< questionBank.length; i++){
+  userInput[i] = prompt(questionBank[i]);
+  if (userInput[i].toLowerCase() === 'yes'){
+    console.log('Your response for question ' + (i+1) +' is: ' + userInput[i])
+  } else if( userInput[i].toLowerCase() === 'no') {
+    console.log('Your response for question ' + (i+1) +' is: ' + userInput[i])
+  } else {
+    console.log('You don\'t me!!');
+  }
+}
+
+for (var i=0; i<userInput.length; i++){
+    if (userInput != null) {
+      document.getElementById("userInput").innerHTML = 'Your answers are' + userInput[i];
+    }
+  
+}
+
+
+
+
+
+
