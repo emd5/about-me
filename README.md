@@ -21,7 +21,7 @@ Use CSS to style your page as you see fit, to the level of abilities in CSS that
 - [x] As a student, I want to create an About Me page as a demonstration of my skills with HTML.
 - [x] As an eventual jobseeker, I want to get practice in creating a portfolio page so that I can make myself appealing to potential employers.
 - [x] As an eventual jobseeker, I would like for potential employers to quickly learn a few things about me, such as a short bio, my education, an overview of my job experience, and my goals.
--[x] As a fun-loving human being, I want to give the visitors to my About Me page a guessing game that shows how fun-loving and interesting I am, and maybe include things about myself that would not ordinarily appear in a portfolio page.
+- [x] As a fun-loving human being, I want to give the visitors to my About Me page a guessing game that shows how fun-loving and interesting I am, and maybe include things about myself that would not ordinarily appear in a portfolio page.
 - [x] As a developer, I want to use markup to structure my index.html page, so the layout is in the order of assembly I prefer, with effective use of the markup possibilities offered by HTML.
 - [x] As a developer, I want to carefully design my scripts, so I can understand how to organize and write my code to achieve my goals in interactivity.
 - [x] As a developer, I want to create a simple script for my index.html page using JavaScript, so that I can use the browser to send a response to the user.

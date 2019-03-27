@@ -1,15 +1,23 @@
 /* style.css  */
 
+* {
+  box-sizing: border-box;
+}
+
 html{
   background: #333;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: white;
-  
 }
+
+h2{
+  color:#333;
+}
+
 header{
   background: palevioletred;
   padding: 2em;
-  height: 30vh;
+  height: 35vh;
   font-size: 20px;
   text-align: center;
 }
@@ -22,9 +30,31 @@ footer{
   text-align: center;
 }
 
-section{
-  height: 40vh;
-  color: white;
+main{
+  height: 80vh;
+  padding: 3em;
+  color: purple;
 }
 
+button{
+  background: purple;
+  color: white;
+  padding: 1em;
+  line-height: 2em;
+  border: 1px solid white;
+}
 
+.column {
+  background-color:rgb(218, 186, 210);
+  float: left;
+  width: 33%;
+  margin: 1px;
+  padding: 10px;
+  height: 300px; 
+}
+
+.row:after {
+  height:60vh;
+  display: flexbox;
+  clear: both;
+}

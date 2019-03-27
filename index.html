@@ -13,17 +13,33 @@
 <body>
   <header>
     <h1> Liz Mahoney</h1>
-    <h3> Software Development Engineer</h3>
-    <h3> About Me</h3>
+    <p> Software Development Engineer</p>
   </header>
-  <section>
+  <main>
+      <div class="row">
+          <div class="column">
+            <h2>Quiz Results</h2>
+            <p>Thank you <span id="username"></span> for getting to know me!</p>
+            <button onclick ='displayResults()'>Results</button>
+            <p id='results'></p>
+
+          </div>
+          <div class="column">
+            <h2>About Me</h2>
+            <p>In 2018, graduated with my Bachelor's in Software Development. CodeFellows Alumni. In March, accepted a job at AWS as a software development engineer.</p>
+          </div>
+          <div class="column">
+            <h2>Goals</h2>
+            <p>Continue to learn new technologies. I'm always curious to learn and dive deep into understanding programming languages and technologies.</p>
+          </div>
+        </div>
     
-  </section>
+  </main>
 
 
   <footer>
     <span> Made by Liz Mahoney | &#169; 2019</span>
   </footer>
-  <script src="js/app.js"></script>
+  <!-- <script src="js/app.js"></script> -->
 </body>
 </html>
