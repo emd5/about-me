@@ -2,7 +2,7 @@
 
 console.log('Page loaded . JS is linked');
 
-var questionBank = ['Do I like coding? ','Do I love dogs? ','Do I love working in back end development? ','Do I like bugs?', 'Do I love to write in python?','What is not my favorite number? ' , 'Where do I live?', 'What is my favorite food', 'True or False: I love photography?'];
+var questionBank = ['Do I like coding? ','Do I love dogs? ','Do I love working in back end development? ','Do I like bugs?', 'Do I love to write in python?','What is not my favorite number? Guess Between [1-10]' , 'Where do I live?', 'What is my favorite food', 'True or False: I love photography?'];
 var correctAnswerBank = ['Yes', 'Yes', 'Yes', 'No', 'Yes', 4 ,'Auburn', 'sushi', true];
 
 // Prompt user name
@@ -10,7 +10,6 @@ var userName = prompt('Hello!!!!! \nWelcome to my page. What is your name? ');
 
 if(userName === null || userName === ''){
   userName = 'Guest';
-  console.log('Your name is Guest ');
 } else {
   console.log('You entered: ' + userName);
 }
@@ -35,28 +34,37 @@ alert('Hello ' + userName.toUpperCase() +'\n\nNow, I am going to ask you questio
 //   }
 // }
 
+// var userAnswer = '';
+// var limit = 3;
+// var numGuesses = 0;
+// while (userAnswer !== 'yes' && numGuesses < limit) {
+//   userAnswer = prompt('Is Ping Pong the best?\nHint: The answer is yes.');
+//   numGuesses++;
+// }
+
 var userInput = [];
 var questionCount = 0;
 var tallyCorrect = 0;
 var tallyWrong = 0;
-var maxNumberOfTries = 4;
-var question5 = 'What is not my favorite number? ';
+var question5 = 'What is not my favorite number? Guess Between [1-10]';
 for (var i=0; i<questionBank.length; i++){
   userInput[i] = prompt(questionBank[i]);
-  console.log( 'RIGHT HERE!! '  + questionBank[i]);
+  // console.log( 'RIGHT HERE!! ' + questionBank[i]);
   var correctMessage = '';
-  var userGuessNumberInput = 0;
+  var limit = 4;
+  var numGuesses = 0;
+  var userNumberInput = '';
   if(questionBank[i] === question5){
-    console.log('Inside! ' + questionBank[i]);
-    while(userGuessNumberInput < maxNumberOfTries){
-      var guessNumber = prompt('Keep trying');
-      if( guessNumber.toString() === correctAnswerBank[5].toString()){
-        console.log(guessNumber + correctMessage+ '! Your response for question ' + (i+1) +' is: ' + userInput[i]);
-        tallyCorrect++;
-      } else{
-        console.log(guessNumber + correctMessage+ '! Try Again');
+
+    while(userNumberInput.toString() !== limit.toString() && numGuesses < limit){
+      console.log(typeof(userNumberInput) + ' | ' + typeof(4));
+      userNumberInput = prompt('Keep trying');
+      if(userNumberInput = ){
+
+      }else{
+
       }
-      userGuessNumberInput ++;
+      numGuesses ++;
     }
   } else if (userInput[i].toString().toLowerCase() === correctAnswerBank[i].toString().toLowerCase()){
     correctMessage = 'Right On!';
@@ -69,7 +77,7 @@ for (var i=0; i<questionBank.length; i++){
   }
   questionCount++;
   console.log(correctMessage + '! The correct answer is: ' + correctAnswerBank[i]);
-  alert(correctMessage + '!\n\n The correct answer is ' + correctAnswerBank[i] + '. \n You answered ' + questionCount + '/' + (questionBank.length+1) + ' | Correct: ' + tallyCorrect + ' | Wrong: ' + tallyWrong);
+  alert(correctMessage + '!\n\n The correct answer is ' + correctAnswerBank[i] + '. \n You answered ' + questionCount + '/' + (questionBank.length) + ' | Correct: ' + tallyCorrect + ' | Wrong: ' + tallyWrong);
 }
 
 // Calculate score
@@ -82,11 +90,36 @@ for (var i = 0; i<userInput.length; i++){
   }
 }
 var result = (score/(questionBank.length+1))*100;
-alert(userName+ ', you know ' + result + '% of me!');
 
+//Game message
+var messageResults = '';
+switch(result){
+case 20:
+  messageResults = 'You don\'t even know me';
+  break;
+case 40:
+  messageResults = 'Boo! You can do better to try to know me';
+  break;
+case 60:
+  messageResults = 'Meh, we need to hang out more';
+  break;
+case 70:
+  messageResults = '70%? You can do better';
+  break;
+case 80:
+  messageResults = '80%... You are close to getting there';
+  break;
+case 100:
+  messageResults = 'Let\'s Code more to get to know each other';
+  break;
+default:
+  messageResults = 'Somehow you broke my game!!!!';
+  break;
+}
 
+alert(userName + ', you know ' + result + '% of me! \n' + messageResults);
 
-// Function which displays the Q/A 
+// Function which displays the Q/A (From Lab 2)
 // eslint-disable-next-line no-unused-vars
 function displayResults(){
   var text = '';
@@ -100,23 +133,3 @@ function displayResults(){
 document.getElementById('username').innerHTML = userName;
 
 
-// Game message
-// switch(result){
-// case 20:
-//   alert('You don\'t even know me');
-//   break;
-// case 40:
-//   alert('Boo! You can do better to know me');
-//   break;
-// case 60:
-//   alert('Meh, we need to hang out more');
-//   break;
-// case 80:
-//   alert('Getting there');
-//   break;
-// case 100:
-//   alert('Let\'s Code more!');
-//   break;
-// default:
-//   alert('Somehow you broke my game!!!!');
-// }

@@ -5,8 +5,8 @@ This project is all about me with a guessing game.
 Liz Mahoney 
 
 ## Feature Tasks
-- [x] Per the user stories, you will need to include in your HTML at least one each of an ordered and an unordered list.
-- [x] Use promptfor input and alert for output to the user, unless you are working on the third Stretch Goal.
+- [x]  Per the user stories, you will need to include in your HTML at least one each of an ordered and an unordered list.
+- [x] Use prompt for input and alert for output to the user, unless you are working on the third Stretch Goal.
 - [x] Do not write any functions in your JavaScript.
 - [x] Expect that you will probably need both ‘for’ and ‘while’ structures for your sixth and seventh questions. But not necessarily.
 
@@ -23,8 +23,8 @@ Liz Mahoney
 - [x] As a prospective job seeker, I want to make myself more personable by adding a Top Ten list to the bottom of my About Me page with an ordered list in HTML, for instance, my Top Ten Favorite Movies or my Top Ten Places I Want to Visit, or something along those lines.
 - [x] As a prospective job seeker, I was to use CSS to creatively and tastefully style and layout my page.
 - [x] As a prospective job seeker, I want to have five yes/no questions in my “about me” guessing game so that I have enough questions to cover a variety of things about me.
-- [x] As a developer, I want to add a sixth question to my guessing game that takes numeric input by prompting a user to guess a number (for instance, “What is my favorite number?” or “How many Pokémon did I catch this week?”), and indicates to the user whether the guess is “too high” or “too low”, and gives the user exactly four opportunities to get the correct answer, so that my fancy programming skills are showcased.
-- [x] As a developer, I want to add a seventh question to my guessing game that has multiple possible correct answers that are stored in an array (for instance, “Can you guess a state that I have lived in besides Washington?”), so that even more of my programming skills are showcased. For now, I will structure this question so that the user has six tries to get a single correct answer, and upon using up those tries OR getting a correct answer, displays a message to the user indicating all of the possible correct answers.
+- [] As a developer, I want to add a sixth question to my guessing game that takes numeric input by prompting a user to guess a number (for instance, “What is my favorite number?” or “How many Pokémon did I catch this week?”), and indicates to the user whether the guess is “too high” or “too low”, and gives the user exactly four opportunities to get the correct answer, so that my fancy programming skills are showcased.
+- [] As a developer, I want to add a seventh question to my guessing game that has multiple possible correct answers that are stored in an array (for instance, “Can you guess a state that I have lived in besides Washington?”), so that even more of my programming skills are showcased. For now, I will structure this question so that the user has six tries to get a single correct answer, and upon using up those tries OR getting a correct answer, displays a message to the user indicating all of the possible correct answers.
 - [x] As a developer, I want to keep a tally of the total number of correct answers given by the user, and at the end of the game, tell the user how well they did with a personalized custom message that includes the number of correct answers and also addresses the user by name, e.g. “You got 4 out of 7 questions correct, Bobbi! Better luck next time.”
 
 ### 3-26-2019
