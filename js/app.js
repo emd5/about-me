@@ -22,7 +22,6 @@ var userInput = [];
 var questionCount = 0;
 var tallyCorrect = 0;
 var tallyWrong = 0;
-// var question5 = 'What is not my favorite number? Guess Between [1-10]';
 for (var i=0; i<questionBank.length; i++){
   var correctMessage = '';
   var limit = 4;
@@ -75,7 +74,6 @@ for (var i=0; i<questionBank.length; i++){
 
   console.log(correctMessage+ '! Your response for question ' + (i+1) +' is: ' + userInput[i]);
   console.log(correctMessage + '! The correct answer is: ' + correctAnswerBank[i]);
-  
   alert(userName + ', You responded '+ correctMessage + ' \n\nThe correct answer is ' + correctAnswerBank[i] + '. \n\nQuestion ' + questionCount + ' out of ' + (questionBank.length) + ' | Correct: ' + tallyCorrect + ' | Wrong: ' + tallyWrong);
 }
 
@@ -127,27 +125,3 @@ function displayResults(){
 
 // Displays username on HTML page
 document.getElementById('username').innerHTML = userName;
-
-// Prompt user input from question bank
-// var userInput = [];
-// for (var i=0; i<questionBank.length; i++){
-//   userInput[i] = prompt(questionBank[i]);
-//   console.log(questionBank[i]);
-//   if (userInput){
-//     if (userInput[i].toLowerCase() === 'yes'){
-//       console.log('Your response for question ' + (i+1) +' is: ' + userInput[i]);
-//     } else if( userInput[i].toLowerCase() === 'no') {
-//       console.log('Your response for question ' + (i+1) +' is: ' + userInput[i]);
-//     }
-//     console.log('The correct answer is: ' + correctAnswerBank[i]);
-//     alert(userName + '!\n\n The correct answer is ' + correctAnswerBank[i]);
-//   }
-// }
-
-// var userAnswer = '';
-// var limit = 3;
-// var numGuesses = 0;
-// while (userAnswer !== 'yes' && numGuesses < limit) {
-//   userAnswer = prompt('Is Ping Pong the best?\nHint: The answer is yes.');
-//   numGuesses++;
-// }
