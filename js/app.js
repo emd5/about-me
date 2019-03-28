@@ -48,36 +48,36 @@ var tallyCorrect = 0;
 var tallyWrong = 0;
 var question5 = 'What is not my favorite number? Guess Between [1-10]';
 for (var i=0; i<questionBank.length; i++){
-  userInput[i] = prompt(questionBank[i]);
-  // console.log( 'RIGHT HERE!! ' + questionBank[i]);
   var correctMessage = '';
   var limit = 4;
   var numGuesses = 0;
   var userNumberInput = '';
+  userInput[i] = prompt(questionBank[i]);
+
   if(questionBank[i] === question5){
-
     while(userNumberInput.toString() !== limit.toString() && numGuesses < limit){
-      console.log(typeof(userNumberInput) + ' | ' + typeof(4));
       userNumberInput = prompt('Keep trying');
-      if(userNumberInput = ){
-
-      }else{
-
-      }
       numGuesses ++;
     }
+    if(userNumberInput === limit.toString()){
+      correctMessage = userNumberInput;
+      tallyCorrect++;
+    } else{
+      correctMessage = userNumberInput;
+      tallyWrong++;
+    }
   } else if (userInput[i].toString().toLowerCase() === correctAnswerBank[i].toString().toLowerCase()){
-    correctMessage = 'Right On!';
+    correctMessage = 'Right On! That is Correct';
     console.log(correctMessage+ '! Your response for question ' + (i+1) +' is: ' + userInput[i]);
     tallyCorrect++;
   } else{
-    correctMessage = 'Nope!';
+    correctMessage = 'Incorrect...........';
     console.log(correctMessage + '! Your response for question ' + (i+1) +' is: ' + userInput[i]);
     tallyWrong++;
   }
   questionCount++;
   console.log(correctMessage + '! The correct answer is: ' + correctAnswerBank[i]);
-  alert(correctMessage + '!\n\n The correct answer is ' + correctAnswerBank[i] + '. \n You answered ' + questionCount + '/' + (questionBank.length) + ' | Correct: ' + tallyCorrect + ' | Wrong: ' + tallyWrong);
+  alert(userName + ', '+correctMessage+ '\n\nThe correct answer is ' + correctAnswerBank[i] + '. \n You answered ' + questionCount + '/' + (questionBank.length) + ' | Correct: ' + tallyCorrect + ' | Wrong: ' + tallyWrong);
 }
 
 // Calculate score
@@ -91,29 +91,23 @@ for (var i = 0; i<userInput.length; i++){
 }
 var result = (score/(questionBank.length+1))*100;
 
-//Game message
+//Game message based from percentage
 var messageResults = '';
 switch(result){
-case 20:
+case result >= 0 || result <= 29:
   messageResults = 'You don\'t even know me';
   break;
-case 40:
+case result >= 30 || result <= 49:
   messageResults = 'Boo! You can do better to try to know me';
   break;
-case 60:
+case result >= 50 || result <=79:
   messageResults = 'Meh, we need to hang out more';
   break;
-case 70:
-  messageResults = '70%? You can do better';
-  break;
-case 80:
+case result >= 80 || result <=100:
   messageResults = '80%... You are close to getting there';
   break;
-case 100:
-  messageResults = 'Let\'s Code more to get to know each other';
-  break;
 default:
-  messageResults = 'Somehow you broke my game!!!!';
+  messageResults = 'You broke my game!';
   break;
 }
 
@@ -124,7 +118,7 @@ alert(userName + ', you know ' + result + '% of me! \n' + messageResults);
 function displayResults(){
   var text = '';
   for( var i=0; i<questionBank.length; i++){
-    text += questionBank[i] + '<br> Your response: ' + userInput[i] + ' | Correct Answer: ' + correctAnswerBank[i] + '<br>';
+    text += '<strong>' + questionBank[i] + '</strong>' + '<br> Your response: ' + userInput[i] + ' | Correct Answer: ' + correctAnswerBank[i] + '<br>';
   }
   document.getElementById('results').innerHTML = text;
 }
