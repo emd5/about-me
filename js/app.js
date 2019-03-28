@@ -3,8 +3,8 @@
 console.log('Page loaded . JS is linked');
 
 var questionBank = ['Do I like coding? ','Do I love dogs? ','Do I love working in back end development? ','Do I like bugs?', 'Do I love to write in python?','What is not my favorite number? Guess Between [1-10]' , 'Can you guess a state that I have lived in besides Washington?', 'What is my favorite food', 'True or False: I love photography?'];
-var stateArray = ['Hawaii', 'Arizona', 'New Mexico', 'Illinois', 'Iowa'];
-var correctAnswerBank = ['Yes', 'Yes', 'Yes', 'No', 'Yes', stateArray , 4 ,'Auburn', 'sushi', true];
+var stateArray = ['hawaii', 'arizona', 'new mexico', 'illinois', 'iowa'];
+var correctAnswerBank = ['Yes', 'Yes', 'Yes', 'No', 'Yes', 4 ,stateArray ,'Auburn', 'sushi', true];
 
 // Prompt user name
 var userName = prompt('Hello!!!!! \nWelcome to my page. What is your name? ');
@@ -24,28 +24,45 @@ var tallyCorrect = 0;
 var tallyWrong = 0;
 // var question5 = 'What is not my favorite number? Guess Between [1-10]';
 for (var i=0; i<questionBank.length; i++){
-  let correctMessage = '';
-  let limit = 4;
-  let numGuesses = 1;
-  let userNumberInput = '';
-  let userStateInput = '';
+  var correctMessage = '';
+  var limit = 4;
+  var stateLimit = 6;
+  var answer5 = 4;
+  var numGuesses = 1;
+  var stateGuesses = 1;
+  var userNumberInput = '';
+  var userStateInput = '';
   userInput[i] = prompt(questionBank[i]);
 
+  //Guess a number
   if(questionBank[i] === questionBank[5]){
-    while(userNumberInput.toString() !== limit.toString() && numGuesses < limit){
+    //add if statement
+    while(userNumberInput.toString() !== answer5.toString() && numGuesses < limit){
       userNumberInput = prompt('Keep trying | Attempts: ' + (numGuesses) + '/' + limit );
       numGuesses ++;
     }
     correctMessage = userNumberInput;
-    if(userNumberInput === limit.toString()){
+    if(userNumberInput === answer5.toString()){
       correctMessage = userNumberInput + '. You are right!';
       tallyCorrect++;
     } else{
       tallyWrong++;
     }
+    //Guess states
   } else if (questionBank[i] === questionBank[6]){
-    while(!stateArray.toString().includes(userStateInput.toLowerCase()) && numGuesses < limit){
-      userStateInput = prompt('Not the state, Try Again! | Attempts ' + (numGuesses)+'/'+limit );
+
+    console.log(userStateInput.toString().toLowerCase() + 'access array ->>>> ' + correctAnswerBank[6]);
+
+    while(!correctAnswerBank[6].includes(userStateInput.toString().toLowerCase()) && stateGuesses < stateLimit){
+      userStateInput = prompt('Not the state, Try Again! | Attempts ' + (stateGuesses)+'/'+ stateLimit );
+      stateGuesses++;
+    }
+    correctMessage = userNumberInput;
+    if(stateArray.includes(userStateInput.toString().toLowerCase())){
+      correctMessage = userStateInput + ' is one of the states I lived in.';
+      tallyCorrect++;
+    } else{
+      tallyWrong++;
     }
   } else if (userInput[i].toString().toLowerCase() === correctAnswerBank[i].toString().toLowerCase()){
     correctMessage = userInput[i] + '. You are right!';
@@ -59,7 +76,7 @@ for (var i=0; i<questionBank.length; i++){
   console.log(correctMessage+ '! Your response for question ' + (i+1) +' is: ' + userInput[i]);
   console.log(correctMessage + '! The correct answer is: ' + correctAnswerBank[i]);
   
-  alert(userName + ', You responded '+ correctMessage+ ' \n\nThe correct answer is ' + correctAnswerBank[i] + '. \n\nQuestion ' + questionCount + ' out of ' + (questionBank.length) + ' | Correct: ' + tallyCorrect + ' | Wrong: ' + tallyWrong);
+  alert(userName + ', You responded '+ correctMessage + ' \n\nThe correct answer is ' + correctAnswerBank[i] + '. \n\nQuestion ' + questionCount + ' out of ' + (questionBank.length) + ' | Correct: ' + tallyCorrect + ' | Wrong: ' + tallyWrong);
 }
 
 // Calculate score
