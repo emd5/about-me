@@ -13,6 +13,10 @@ Liz Mahoney
 
 ## Changelog 
 
+### 3-28-2019
+
+ - [x] Pair programming with Roger Huba (Driver). I was the Navigator. We fixed bugs on app.js
+
 ### 3-27-2019
 
 - [x] As a developer, I want to use thoughtful and descriptive console.log() statements throughout my code to help test my work and assist with debugging.
