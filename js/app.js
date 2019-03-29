@@ -5,7 +5,7 @@ console.log('Page loaded. JS is linked');
 var questionBank = ['Do I like coding? ', 'Do I love dogs? ', 
   'Do I love working in back end development? ', 'Do I like bugs?', 'Do I love to write in python?', 
   'What is not my favorite number? Guess Between [1-10]' , 'Can you guess a state that I have lived in besides Washington?',
-  'Where am I currently living ? ', 'What is my favorite food', 'True or False: I love photography?']; 
+  'Where am I currently living ? ', 'What is my favorite food','True or False: I love photography?']; 
 var stateArray = ['hawaii', 'arizona', 'new mexico', 'illinois', 'iowa'];
 var correctAnswerBank = ['Yes', 'Yes', 'Yes', 'No', 'Yes', 4 , stateArray ,'Auburn', 'sushi', true];
 
