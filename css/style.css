@@ -30,11 +30,6 @@ footer{
   text-align: center;
 }
 
-#results{
-  overflow-y: auto;
-  overscroll-behavior-y: 
-}
-
 main{
   height: 180vh;
   padding: 3em;
