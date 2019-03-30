@@ -20,6 +20,7 @@ header{
   height: 35vh;
   font-size: 20px;
   text-align: center;
+  display: block;
 }
 
 footer{
@@ -28,11 +29,7 @@ footer{
   height: 5vh;
   padding: 2em;
   text-align: center;
-}
-
-#results{
-  overflow-y: auto;
-  overscroll-behavior-y: 
+  display: block;
 }
 
 main{
