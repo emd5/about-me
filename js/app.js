@@ -32,7 +32,6 @@ function guessingGame(userName){
     var numGuesses = 1;
     var stateGuesses = 1;
     userInput[i] = prompt(questionBank[i]);
-    confirm(userInput[i]);
     //Guess a number
     if(i === 5 ){
       var limit = 4;
