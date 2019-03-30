@@ -26,13 +26,12 @@ var tallyCorrect = 0;
 var tallyWrong = 0;
 function guessingGame(userName){
   var questionCount = 0;
-  for (var i=0; i<questionBank.length; i++){
+  for (let i=0; i<questionBank.length; i++){
     var correctMessage = '';
     var answer5 = 4;
     var numGuesses = 1;
     var stateGuesses = 1;
     userInput[i] = prompt(questionBank[i]);
-    confirm(userInput[i]);
     //Guess a number
     if(i === 5 ){
       var limit = 4;
@@ -84,7 +83,7 @@ var result;
 function scoreGame(userInput, tallyCorrect){
   // eslint-disable-next-line no-unused-vars
   var score = 0;
-  for (var i = 0; i<userInput.length; i++){
+  for (let i = 0; i<userInput.length; i++){
     console.log(userInput[i].toString().toLowerCase() + ' | ' + correctAnswerBank[i].toString().toLowerCase());
     if (userInput[i].toString().toLowerCase() === correctAnswerBank[i].toString().toLowerCase()){
       score++;
@@ -121,7 +120,7 @@ function gameMessage(tallyCorrect, tallyWrong, result){
 // eslint-disable-next-line no-unused-vars
 function displayResults(){
   var text = '';
-  for( var i=0; i < questionBank.length; i++){
+  for(let i=0; i < questionBank.length; i++){
     text += '<strong>' + questionBank[i] + '</strong>' + '<br> Your response: ' + userInput[i] + ' | Correct Answer: ' + correctAnswerBank[i] + '<br>';
   }
   document.getElementById('results').innerHTML = text;
